@@ -1,6 +1,5 @@
 
 #include <iostream>
-
 using namespace std;
 
 double celsiusToFahrenheit(double celsius) {
@@ -26,53 +25,52 @@ double kelvinToCelsius(double kelvin) {
 double kelvinToFahrenheit(double kelvin) {
     return (kelvin - 273.15) * 9 / 5 + 32;
 }
-void tampilkanMenu() {
+void displayMenu() {
     cout << "==============================" << endl;
-    cout << "      Konversi Suhu         " << endl;
+    cout << "      Temperature Converter   " << endl;
     cout << "==============================" << endl;
-    cout << "1. Celsius ke Fahrenheit (°C => °F)" << endl;
-    cout << "2. Celsius ke Kelvin\t (°C =>  K)" << endl;
-    cout << "3. Fahrenheit ke Celsius (°F => °C)" << endl;
-    cout << "4. Fahrenheit ke Kelvin\t (°F =>  K)" << endl;
-    cout << "5. Kelvin ke Celsius\t ( K => °C)" << endl;
-    cout << "6. Kelvin ke Fahrenheit\t ( K => °F)" << endl;
+    cout << "1. Celsius to Fahrenheit (°C => °F)" << endl;
+    cout << "2. Celsius to Kelvin\t (°C => K)" << endl;
+    cout << "3. Fahrenheit to Celsius (°F => °C)" << endl;
+    cout << "4. Fahrenheit to Kelvin\t (°F => K)" << endl;
+    cout << "5. Kelvin to Celsius\t (K => °C)" << endl;
+    cout << "6. Kelvin to Fahrenheit\t (K => °F)" << endl;
     cout << "==============================" << endl;
 }
 
 int main() {
-    double suhu;
-    int pilihan;
+    double temperature;
+    int choice;
 
-    tampilkanMenu();
+    displayMenu();
 
-    cout << "Masukkan pilihan (1-6): ";
-    cin >> pilihan;
+    cout << "Enter your choice (1-6): ";
+    cin >> choice;
 
-    cout << "Masukkan suhu: ";
-    cin >> suhu;
+    cout << "Enter the temperature: ";
+    cin >> temperature;
 
-
-    switch (pilihan) {
+    switch (choice) {
         case 1:
-            cout << suhu << " °C = " << celsiusToFahrenheit(suhu) << " °F" << endl;
+            cout << temperature << " °C = " << celsiusToFahrenheit(temperature) << " °F" << endl;
             break;
         case 2:
-            cout << suhu << " °C = " << celsiusToKelvin(suhu) << " K" << endl;
+            cout << temperature << " °C = " << celsiusToKelvin(temperature) << " K" << endl;
             break;
         case 3:
-            cout << suhu << " °F = " << fahrenheitToCelsius(suhu) << " °C" << endl;
+            cout << temperature << " °F = " << fahrenheitToCelsius(temperature) << " °C" << endl;
             break;
         case 4:
-            cout << suhu << " °F = " << fahrenheitToKelvin(suhu) << " K" << endl;
+            cout << temperature << " °F = " << fahrenheitToKelvin(temperature) << " K" << endl;
             break;
         case 5:
-            cout << suhu << " K = " << kelvinToCelsius(suhu) << " °C" << endl;
+            cout << temperature << " K = " << kelvinToCelsius(temperature) << " °C" << endl;
             break;
         case 6:
-            cout << suhu << " K = " << kelvinToFahrenheit(suhu) << " °F" << endl;
+            cout << temperature << " K = " << kelvinToFahrenheit(temperature) << " °F" << endl;
             break;
         default:
-            cout << "Pilihan tidak valid!" << endl;
+            cout << "Invalid choice!" << endl;
     }
 
     return 0;
